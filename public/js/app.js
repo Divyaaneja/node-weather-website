@@ -14,7 +14,7 @@ const search = document.querySelector('input')
 const messageone = document.querySelector('#message-1')
 const messagetwo = document.querySelector('#message-2')
 const messagethree = document.querySelector('#message-3')
-
+const messagefour = document.querySelector('#message-4')
 
 formdata.addEventListener('submit',(e)=>{
     e.preventDefault()
@@ -22,6 +22,7 @@ formdata.addEventListener('submit',(e)=>{
     messageone.textContent = 'Loading...'
     messagetwo.textContent = ''
     messagethree.textContent = ''
+    messagefour.textContent = ''
 
     
     fetch('/weather?address='+encodeURIComponent(location) ).then((response)=>{
@@ -32,7 +33,8 @@ formdata.addEventListener('submit',(e)=>{
             }else{
                 messageone.textContent = data.location,
                 messagetwo.textContent = data.description,
-                messagethree.textContent = data.forecast
+                messagethree.textContent = data.forecast1,
+                messagefour.textContent = data.forecast2
 
                 // console.log(data.location)
                 // console.log(data.description)

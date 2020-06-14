@@ -74,7 +74,8 @@ app.get('/weather',(req,res)=>{
                 // temp:forecastdata.temp,
                 // feelslike:forecastdata.feelslike
                 description:forecastdata.des,
-                forecast:'It is currently '+forecastdata.temp+' degrees out but feels like '+forecastdata.feelslike + ' .Weather observation time is ' +forecastdata.time
+                forecast1:'It is currently '+forecastdata.temp+' degrees out but feels like '+forecastdata.feelslike +'.',
+                forecast2:'Humidity is ' +forecastdata.humidity+ '%.Weather observation time is ' +forecastdata.time +'.'
             })
         })
 
