@@ -14,6 +14,8 @@ const htmlpath = path.join(__dirname,'../public')
 const viewpath = path.join(__dirname,'../templates/views')
 const partialpath = path.join(__dirname, '../templates/partials')
 
+const port = process.env.PORT || 3000
+
 //setup static directory to serve
 app.use(express.static(htmlpath))
 
@@ -97,8 +99,8 @@ app.get('*',(req,res)=>{
 
 
 
-app.listen(3000, ()=>{
-    console.log("server is running on port 3000")
+app.listen(port, ()=>{
+    console.log("server is running on port:"+port)
 })
 
 
